@@ -1,0 +1,103 @@
+/* Sidebar.module.css */
+.sidebar {
+	height: 100vh;
+	background-color: var(--primary);
+
+	position: relative;
+	transition: all 0.4s ease-in-out;
+	z-index: 9;
+}
+
+.sidebarOpen {
+	width: 300px;
+}
+
+.sidebarClosed {
+	width: 70px;
+}
+
+.toggleButton {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	position: absolute;
+	right: -24px;
+	top: 100px;
+	background-color: #d9eafd;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+}
+
+.menuItemsContainer {
+	padding-top: 90px;
+}
+
+.menuItem {
+	display: flex;
+	align-items: center;
+	margin-top: 32px;
+	margin-left: 16px;
+	margin-right: 16px;
+	cursor: pointer;
+	padding: 12px;
+	border-radius: 8px;
+	transition: all 0.01s;
+	gap: 8px;
+}
+
+.menuItem:hover {
+	background-color: var(--background);
+}
+
+.icon {
+	position: fixed;
+	left: 20px;
+	font-size: 30px;
+	color: rgba(35, 35, 35, 0.8);
+}
+
+.menuItemTitle {
+	margin-left: 34px;
+	color: var(--grey-dark);
+	white-space: nowrap; /* Taşmayı önler */
+	overflow: hidden;
+	transition: opacity 0.3s ease-in-out, max-width 0.3s ease-in-out, visibility 0s linear 0.3s;
+	/* visibility için gecikme ekledik */
+}
+
+.activeMenuItem {
+	background-color: var(--background);
+}
+
+.menuItemTitleHidden {
+	opacity: 0; /* Önce şeffaf yap */
+	max-width: 0; /* Sonra sıkıştır */
+	visibility: hidden; /* 0.3s gecikmeli olarak etkinliği kaldır */
+}
+
+.sidebarOpen .menuItemTitle {
+	opacity: 1; /* Görünür yap */
+	max-width: 200px; /* Akıcı genişleme efekti */
+	visibility: visible; /* Anında aktif et */
+	transition: opacity 0.3s ease-in-out, max-width 0.3s ease-in-out;
+}
+
+@media (max-width: 714px) {
+	.menuItemsContainer {
+		padding-top: 110px;
+	}
+	.toggleButton {
+		top: 120px;
+	}
+}
+
+@media (max-width: 430px) {
+	.menuItemsContainer {
+		padding-top: 130px;
+	}
+	.toggleButton {
+		top: 125px;
+	}
+}

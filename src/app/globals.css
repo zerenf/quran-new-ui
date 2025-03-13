@@ -57,6 +57,7 @@
 	--green-dark: #0d7c66;
 	--grey: #9aa6b2;
 	--grey-dark: #616b76;
+	--dark: #232323;
 
 	/* fonts */
 	--arabic: "Arabic", sans-serif;
@@ -74,6 +75,7 @@
 	--color-green: #019267;
 	--color-grey: #9aa6b2;
 	--color-grey-dark: #616b76;
+	--color-dark: #232323;
 
 	/* fonts */
 	--font-arabic: "Arabic", sans-serif;
@@ -84,4 +86,11 @@
 body {
 	background: var(--background);
 	font-family: var(--nunito);
+}
+
+.home {
+	background-image: url("../assets/images/bg.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }

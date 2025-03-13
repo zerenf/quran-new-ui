@@ -14,7 +14,7 @@
 
 .logoContainer {
 	position: absolute;
-	left: 10px;
+	left: 14px;
 	top: 50%;
 	transform: translateY(-50%);
 }
@@ -25,41 +25,48 @@
 
 .headerTitleContainer {
 	display: flex;
-	align-items: center;
-	justify-content: end;
-	flex-wrap: wrap;
+	align-items: end;
+	flex-direction: column;
+	/* flex-wrap: wrap; */
 }
 
 .headerText {
 	font-family: "Lateef", serif;
 	font-size: 26px;
 	color: var(--color-grey-dark);
-	text-align: center;
+	text-align: end;
 	margin-right: 16px;
 }
 
 .headerTextMeal {
-	margin-right: 10px;
-	/* font-size: 12px; */
-	margin-left: 70px;
+	margin-right: 16px;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
 	.headerTextMeal {
 		margin-right: 10px;
 	}
+} */
+
+@media (max-width: 850px) {
+	.headerTextMeal {
+		margin-left: 70px;
+		font-size: 14px;
+	}
 }
 
-@media (max-width: 430px) {
-	.headerTitleContainer {
-		/* width: 320px; */
+@media (max-width: 760px) {
+	.headerTextMeal {
+		font-size: 13px;
 	}
-
+}
+@media (max-width: 430px) {
 	.headerText {
 		font-size: 23px;
 	}
 	.headerTextMeal {
 		font-size: 13px;
+		/* margin-left: 70px; */
 	}
 }
 
@@ -73,6 +80,15 @@
 }
 
 @media (max-width: 350px) {
+	.headerTextMeal {
+		font-size: 11px;
+	}
+}
+
+@media (max-width: 350px) {
+	.headerText {
+		font-size: 19px;
+	}
 	.headerTextMeal {
 		font-size: 11px;
 	}

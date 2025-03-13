@@ -1,18 +1,21 @@
+import { usePathname } from "next/navigation"
 import Image from "next/image"
-import mealliTumSure from "@/assets/images/main-icons-big/mealli-tum-sure.png"
 import styles from "./mainSelectCard.module.css"
+import Link from "next/link"
 
 const MainSelectCard = ({ card }) => {
 	return (
-		<div className={styles.cardContainer}>
-			<Image src={card.image} fill alt={card.title} className={styles.cardImage} />
+		<Link href={card.path}>
+			<div className={styles.cardContainer}>
+				<Image src={card.image} fill alt={card.title} className={styles.cardImage} />
 
-			{/* Karartma Efekti */}
-			<div className={styles.overlay} style={{ backgroundColor: card.color }}></div>
+				{/* Karartma Efekti */}
+				<div className={styles.overlay} style={{ backgroundColor: card.color }}></div>
 
-			{/* Ortadaki Yazı */}
-			<div className={styles.text}>{card.title}</div>
-		</div>
+				{/* Ortadaki Yazı */}
+				<div className={styles.text}>{card.title}</div>
+			</div>
+		</Link>
 	)
 }
 

@@ -1,0 +1,9 @@
+.layoutContainer {
+	display: flex;
+	/* margin-top: 85px; */
+	z-index: 1;
+}
+
+.mainContent {
+	flex: 1;
+}

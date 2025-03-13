@@ -24,15 +24,15 @@ export default function Home() {
 	const closeModal = () => setIsOpen(false)
 
 	const cardDatas = [
-		{ title: "Mealli Tüm Sure Oku", image: mealliTumSure, color: "rgba(13, 10, 69, 0.5)" },
-		{ title: "Meal Ara", image: meallAra, color: "rgba(188, 120, 26, 0.459)" },
-		{ title: "Kelime Ara", image: kelimeAra, color: "rgba(18, 147, 81, 0.459)" },
-		{ title: "Arapça Kelime Ara", image: arapcaKelimeAra, color: "rgba(37, 156, 220, 0.459)" },
+		{ title: "Mealli Tüm Sure Oku", image: mealliTumSure, color: "rgba(13, 10, 69, 0.5)", path: "/mealli-tum-sure-oku" },
+		{ title: "Meal Ara", image: meallAra, color: "rgba(188, 120, 26, 0.459)", path: "/meal-ara" },
+		{ title: "Kelime Ara", image: kelimeAra, color: "rgba(18, 147, 81, 0.459)", path: "/kelime-ara" },
+		{ title: "Arapça Kelime Ara", image: arapcaKelimeAra, color: "rgba(37, 156, 220, 0.459)", path: "/arapca-kelime-ara" },
 	]
 	return (
 		<>
-			<div className="w-screen h-screen flex justify-center items-center">
-				<div className="grid grid-cols-2 justify-items-center items-center gap-4 sm:gap-10 md:gap-16 lg:gap-24 m-3">
+			<div className="w-screen h-screen flex justify-center items-center home">
+				<div className="grid grid-cols-2 justify-items-center items-center gap-4 sm:gap-10 md:gap-16 lg:gap-24 m-3 mt-10">
 					{cardDatas.map((card, index) => (
 						<div key={index}>
 							<MainSelectCard card={card} />
