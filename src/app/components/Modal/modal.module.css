@@ -1,0 +1,52 @@
+.modalOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: fadeIn 0.5s ease-out; /* Modal açılma animasyonu */
+}
+
+.modalContent {
+	background-color: white;
+	padding: 10px;
+	border-radius: 8px;
+	max-width: 600px;
+	width: 100%;
+	animation: slideUp 0.5s ease-out; /* Modalın yukarı kayarak gelmesi animasyonu */
+	position: relative;
+	margin: 0 12px;
+}
+
+.closeButton {
+	background: none;
+	border: none;
+	font-size: 26px;
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	cursor: pointer;
+	/* Kapatma butonu animasyonlu olacak ama sürekli görünür */
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideUp {
+	from {
+		transform: translateY(20px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
